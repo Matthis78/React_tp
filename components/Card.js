@@ -1,7 +1,6 @@
 import react from 'react'
 import Image from 'next/image'
 import Link from "next/link";
-import React from "react";
 
 export default function Card(props) {
 
@@ -21,7 +20,7 @@ export default function Card(props) {
                 pathname: '/[name]',
                 query: { name: props.coin_name },
             }} >
-                <a>{props.coin_name}</a>
+                <a>Voir le Coin</a>
             </Link>
         </div>
     )
