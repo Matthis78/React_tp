@@ -17,8 +17,8 @@ export default function Card(props) {
             {props.logo && <Image src={props.logo} alt="" width="100%" height="100%"/>}
             <button onClick={() => displayProps(props)}>Display props (console)</button><br/><br/>
             <Link href={{
-                pathname: '/[name]',
-                query: { name: props.coin_name },
+                pathname: `/${props.name}`,
+                query: { name: props.coin_name, acronym: props.acronym, logo: props.logo },
             }} >
                 <a>Voir le Coin</a>
             </Link>
