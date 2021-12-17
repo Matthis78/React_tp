@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import React, {useState, useEffect} from 'react';
 import Card from '../components/Card'
 import Header from '../components/Header'
+import Link from "next/link";
 
 
 
@@ -64,17 +65,25 @@ export default function Home() {
                                 return (
                                     <div key={i}>
                                         <Card coin_name={item.coin_name} acronym={item.acronym} logo={item.logo}></Card>
+
                                     </div>
+
                                 )
                             })
                         )}
                     </div>
-
+                    <Link href={{
+                        pathname: `/form`,
+                    }} >
+                        <a>Créer un coin !</a>
+                    </Link>
                     <div className="todoContainer">
+
                         <h4>Todo list</h4>
                         <input type="text" onChange={handleOnChange}/>
                         <button onClick={() => addTask()}>Add</button>
                         <br/><br/>
+
                         <div className="todoContainerList">
                             {todoList.length > 0 && (
                                 todoList.map((todo, i) => {
@@ -90,7 +99,9 @@ export default function Home() {
                                 })
                             )}
                         </div>
+
                     </div>
+
 
                 </div>
 
