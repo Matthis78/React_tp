@@ -10,14 +10,7 @@ const Product = () => {
 
         return (
             <>
-                <h1>Product: {productName}</h1>
-                <ul>
-                    <li>
-                        <Link href="/pages/[id]/[productName]" as={`/pages/${id}/first-product`}>
-                            <a>First product</a>
-                        </Link>
-                    </li>
-                </ul>
+                {router.query.productName}
             </>
         )
     }
